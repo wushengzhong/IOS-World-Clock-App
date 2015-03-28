@@ -1,0 +1,45 @@
+ <div ng-controller="addcityCtrl">
+ <header class="cityheader">
+            <div class="choosecity">Choose a City: <span><a ng-class="getClass('/worldclock')" ng-click='clickaddcity()'></a></span></div>
+            <input class="auto-input inputbox"  type="text" ng-model="cityname" ng-change="autocomplete()"></input><span><a ng-click='canceladdcity()'>Cancel</a></span>
+
+  </header>
+
+     <div class="scrollrable-content">
+
+         <div class="textremind" ng-show="showtyperemindlabel">
+
+             <label>{{typeremindlabel}}</label>
+
+         </div>
+
+         <div >
+             <ul class="world-time" ng-repeat="city in citydata ">
+
+                 <li>{{showfirstletter(city)}}</li>
+                 <li ng-click="clickCity(city)">
+                     <p class="place">{{city.cityName}} </p>
+
+                 </li>
+
+             </ul>
+         </div>
+
+     </div>
+
+</div>
+<!-- <div> -->
+
+<!-- <div class="scrollrable-content" ng-init="onTimeout()">
+	<ul class="world-time" ng-repeat="place in worldtime | orderBy:'cityName' ">
+		<li>
+			<p class="place">{{place.cityName}} <br/><span class ="local-time">
+			{{ calculateWorldTime(place) |  date: 'h:mm a'}}	 
+			</span></p><p class="local-date"> <b>{{timeDetail(place)}}	</b></p>
+
+		</li>
+		
+	</ul>
+</div>  -->
+
+<!-- </div> -->

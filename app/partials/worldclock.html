@@ -1,0 +1,20 @@
+ <header class="site-header">
+            <div class="headfirst"><span><a class="editcityicon" style="float:left; margin: 10px; color:red;font-size:15px" ng-click='editcity()'>{{editOrDone}}</a></span><b> World Clock </b><span><a class="addcityicon" style="float:right;margin: 10px; color:red;font-size:20px" ng-click='clickaddcity()'>+</a></span></div>
+            
+
+         </header>
+<div>
+
+<div class="scrollrable-content" ng-init="onTimeout()">
+	<ul class="world-time" ng-repeat="place in worldtimeData | orderBy:'cityName' "> <li ng-click="deleteCity(place)">
+          <p class="place">
+              <span ng-show="isEditing" sytle="color:red;font-size:20px">⊖ </span><span>{{place.cityName}}</span> <br/><span class ="local-time" ng-hide="isEditing">
+			{{ calculateWorldTime(place) |  date: 'h:mm a'}}
+			</span></p><p class="local-date"> <b>{{timeDetail(place)}}	</b></p>
+
+		</li>
+		
+	</ul>
+</div>
+
+</div>
