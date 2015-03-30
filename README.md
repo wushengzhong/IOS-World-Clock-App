@@ -1,4 +1,4 @@
-Build native IOS like hybrid app with AngularJS, PhoneGap and RESTful API( Nodejs, ExpressJs and Mongodb)
+Build native like iOS hybrid app with AngularJS, PhoneGap and RESTful API( Nodejs, ExpressJs and Mongodb)
 =====
 1. Show the current time of different city user selected which are stored in RESTful API. Also show the difference time in other city with the local time.
 =====
