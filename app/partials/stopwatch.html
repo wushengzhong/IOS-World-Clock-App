@@ -1,0 +1,43 @@
+
+ <header class="site-header">
+            <div class="headfirst"><b> Stop Watch </b></div>
+</header>
+
+<div ng-controller="stopwatchCtrl" class="page">
+
+  <div class ="fixed_top">
+
+
+
+            <div class="time-content">    
+       
+             <div class="p-small">{{counterSec|formatTimer}} </div><br>
+             <div class="p-big">{{counter|formatTimer}} </div>
+       
+           </div>
+
+
+      <div class="control">
+             <input ng-click="startBtnEvent()" type="button" value={{startbuttonText}} style="color:{{sstartColor}}">
+             <input ng-click="pauseBtnEvent()" type="button" value={{lapbuttonText}} style="color:{{spauseColor}}">
+        </div>
+
+   </div>
+ 
+  <div class="lap_content"> 
+   <ul ng-repeat="lap in laps" class="laplist">
+    <li>
+      <p class="lap2">Lap{{$index + 1}}
+         <span class="lap2time">{{lap}}</span>
+      </p>
+    </li>
+  </ul>
+  </div>
+
+</div>
+
+
+
+  
+
+
