@@ -1,0 +1,22 @@
+
+  <header class="site-header">
+            <div class="headfirst"><b> Timer </b></div>
+ </header>
+
+<div ng-controller="timerCtrl" class="page-content">
+   <div ng-show="!startted" class="time-content">
+          <input ng-model="hoursinput" type="number" name="hour" min="0" max="12"  >
+          <input ng-model="minsinput" type="number" name="minute" min="0" max="59"  >
+   </div>
+   <div ng-show="startted" class="time-content">
+           <div class="p-big"> {{counter|TimerformatTimer}} </div>  
+   </div>
+
+
+       <div class="control-button">
+             <input  ng-click="start()" type="button" name="start"  style="color: {{startColor}}" value= {{startbuttonText}} ></input>
+             <input ng-click="pause()" type="button" name="pause" style="color: {{pauseColor}}" value={{pausebuttonText}} ></input>
+       </div>
+</div>    
+
+
